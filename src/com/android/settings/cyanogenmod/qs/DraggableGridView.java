@@ -8,7 +8,7 @@
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable aw or agreed to in writing, software
+ * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
@@ -56,7 +56,7 @@ public class DraggableGridView extends ViewGroup implements
     protected OnClickListener mSecondaryOnClickListener;
     private AdapterView.OnItemClickListener mOnItemClickListener;
 
-    private boolean mUseMainTiles = false;
+    private boolean mUseMainTiles = true;
     private int mMaxItemCount = -1;
 
     protected Runnable mUpdateTask = new Runnable() {
