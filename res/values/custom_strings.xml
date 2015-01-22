@@ -91,8 +91,21 @@
     <string name="touch_control_settings_title">Touch control</string>
     <string name="touch_control_settings_summary">Manage advance wakeup options including double tap to wake and more</string>
 
-    <!-- Quick settings -->
+    <!-- QuickSettings tiles -->
     <string name="quick_settings_category">Quick settings</string>
+    <string name="qs_battery_saver_tile">Battery saver</string>
+    <string name="qs_brightness_tile">Brightness</string>
+    <string name="qs_expanded_desktop_tile">Expanded desktop</string>
+    <string name="qs_notifications_tile">Notifications</string>
+    <string name="qs_screen_off_tile">Screen off</string>
+    <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_screentimeout_tile">Screen timeout</string>
+    <string name="qs_sync_tile">Sync</string>
+
+    <!-- QuickSettings screen timeout -->
+    <string name="qs_screentimeout_mode_title">Screen timeout modes</string>
+
+    <!-- QuickSettings block on keyguard -->
     <string name="block_on_secure_keyguard_title">Disable on lock screen</string>
     <string name="block_on_secure_keyguard_summary">Disable quick settings on secure lock screen</string>
 

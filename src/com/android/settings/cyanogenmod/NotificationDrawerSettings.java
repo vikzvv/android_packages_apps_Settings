@@ -16,6 +16,7 @@
 package com.android.settings.cyanogenmod;
 
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
@@ -31,9 +32,11 @@ import com.android.internal.widget.LockPatternUtils;
 public class NotificationDrawerSettings extends SettingsPreferenceFragment
             implements OnPreferenceChangeListener  {
 
+    private static final String QS_SCREENTIMEOUT_MODE = "qs_expanded_screentimeout_mode";
     private static final String QS_BLOCK_ON_SECURE_KEYGUARD = "qs_block_on_secure_keyguard";
 
     private Preference mQSTiles;
+    private ListPreference mScreenTimeoutMode;
     private SwitchPreference mBlockOnSecureKeyguard;
 
     @Override
@@ -43,6 +46,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mQSTiles = findPreference("qs_order");
+
+        // Screen timeout mode
+        mScreenTimeoutMode = (ListPreference) prefSet.findPreference(QS_SCREENTIMEOUT_MODE);
+        mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntry());
+        mScreenTimeoutMode.setOnPreferenceChangeListener(this);
 
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
         mBlockOnSecureKeyguard = (SwitchPreference) findPreference(QS_BLOCK_ON_SECURE_KEYGUARD);
@@ -70,6 +78,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mScreenTimeoutMode) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenTimeoutMode.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_EXPANDED_SCREENTIMEOUT_MODE, value);
+            mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntries()[index]);
             return true;
         }
         return false;

@@ -90,6 +90,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_hotspot_on";
                 stringId = R.string.qs_tile_hotspot;
                 break;
+            case QSConstants.TILE_NOTIFICATIONS:
+                resourceName = "ic_qs_ringer_audible";
+                stringId = R.string.qs_notifications_tile;
+                break;
             case QSConstants.TILE_ADB_NETWORK:
                 resourceName = "ic_qs_network_adb_on";
                 stringId = R.string.qs_tile_adb_over_network;
@@ -109,6 +113,34 @@ public class QSTileHolder {
             case QSConstants.TILE_LOCKSCREEN:
                 resourceName = "ic_qs_lock_screen_on";
                 stringId = R.string.qs_tile_lockscreen;
+                break;
+            case QSConstants.TILE_BATTERY_SAVER:
+                resourceName = "ic_qs_battery_saver_on";
+                stringId = R.string.qs_battery_saver_tile;
+                break;
+            case QSConstants.TILE_BRIGHTNESS:
+                resourceName = "ic_qs_brightness_on";
+                stringId = R.string.qs_brightness_tile;
+                break;
+            case QSConstants.TILE_EXPANDED_DESKTOP:
+                resourceName = "ic_qs_expanded_desktop";
+                stringId = R.string.qs_expanded_desktop_tile;
+                break;
+            case QSConstants.TILE_SCREEN_OFF:
+                resourceName = "ic_qs_screen_off";
+                stringId = R.string.qs_screen_off_tile;
+                break;
+            case QSConstants.TILE_SCREEN_TIMEOUT:
+                resourceName = "ic_qs_screen_timeout_on";
+                stringId = R.string.qs_screentimeout_tile;
+                break;
+            case QSConstants.TILE_SCREENSHOT:
+                resourceName = "ic_qs_screenshot";
+                stringId = R.string.qs_screenshot_tile;
+                break;
+            case QSConstants.TILE_SYNC:
+                resourceName = "ic_qs_sync_on";
+                stringId = R.string.qs_sync_tile;
                 break;
             default:
                 return null;
