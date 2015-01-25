@@ -66,6 +66,14 @@
     <string name="show_carrier_statusbar">Opérateur sur la barre de statut</string>
     <string name="show_carrier_enabled">Activé</string>
 
+    <!--Status bar date -->
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Style de la date</string>
+    <string name="status_bar_date_none">Ne pas montrer</string>
+    <string name="status_bar_date_small">Taille de police petite</string>
+    <string name="status_bar_date_normal">Taille de police normale</string>
+    <string name="status_bar_date_format_title">Format de la date</string>
+
     <!-- Notification ticker -->
     <string name="status_bar_ticker_title">Notifications animées</string>
     <string name="status_bar_ticker_summary">Animation du texte des notifications dans la barre d\'état</string>
